@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <center><h1>Hello {{request.user}}, Welcome to my chat site!</h1></center>
+    <br />
+    <h1>{{request.user}}, please select chat room</h1>
+    {% for room in rooms %}
+    <a href="{% url 'room' room.name %}">{{room.name}}</a>
+    <br />
+    {% endfor %}
+  </body>
+</html>
